@@ -1,12 +1,12 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import type { DeckKey, Draw } from './types'
 import { useStore } from './hooks/useStore'
-import { Shuffle, Star, FileText, ChevronDown, ChevronUp, History, Settings, Copy, Check, Trash2, RotateCcw } from 'lucide-react'
+import { Shuffle, Star, ChevronDown, ChevronUp, History, Settings, Copy, Check, Trash2, RotateCcw } from 'lucide-react'
 import ManageDecks from './components/ManageDecks'
 
 export default function App() {
   const {
-    store, doDraw, drawOne, updateLatestDraw, updateDraw,
+    store, doDraw, drawOne, updateLatestDraw,
     clearHistory, addDeckEntry, updateDeckEntry, deleteDeckEntry,
   } = useStore()
 
@@ -76,9 +76,6 @@ export default function App() {
     setFlipped(true)
     setShowHistory(false)
   }
-
-  const cardColor = (deckKey: DeckKey) =>
-    deckKey === 'themes' ? 'violet' : deckKey === 'constraints' ? 'amber' : 'rose'
 
   const glowClass = (deckKey: DeckKey) =>
     deckKey === 'themes' ? 'glow-violet' : deckKey === 'constraints' ? 'glow-amber' : 'glow-rose'

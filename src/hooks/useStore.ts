@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
-import type { AppStore, Draw, Decks, DeckKey } from '../types'
+import type { AppStore, Draw, DeckKey } from '../types'
 import { STARTER_DECKS } from '../types'
 
 const STORAGE_KEY = 'constraint-deck-v1'

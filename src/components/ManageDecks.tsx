@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { X, Plus, Pencil, Trash2, Check } from 'lucide-react'
 import type { Decks, DeckKey } from '../types'
-import { DECK_LABELS, DECK_COLORS } from '../types'
+import { DECK_LABELS } from '../types'
 
 interface Props {
   decks: Decks
